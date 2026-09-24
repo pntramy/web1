@@ -1,0 +1,244 @@
+/* =======================================================
+   BỘ ĐỊNH DẠNG CSS TOÀN DIỆN - ĐỒNG BỘ ĐÚNG GIAO DIỆN MẪU
+   ======================================================= */
+
+/* 1. Reset các giá trị lề mặc định và đặt font chữ văn bản (Times New Roman) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Times New Roman", Times, serif;
+}
+
+body {
+    background-color: #ffffff;
+    padding: 15px 25px;
+}
+
+/* ÉP RIÊNG CÁC TIÊU ĐỀ LÀM THEO FONT CHỮ ARIAL THEO ĐÚNG ĐỀ BÀI */
+.main-title, 
+.section-heading, 
+.sidebar-marathon h2 {
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+/* 🌟 CLASS CHUYÊN BIỆT ĐỔI MÀU CAM CHO DÒNG VĂN BẢN ĐƯỢC CHỈ ĐỊNH */
+.text-orange,
+.text-orange .prod-name,
+.text-orange .special-tag {
+    color: #ff6347 !important; /* Sử dụng chính xác màu cam Tomato */
+}
+A {
+font-size: 0.9em;
+color: green
+}
+A:hover {
+color:red;
+text-transform:uppercase;
+font-weight:bold
+}
+
+/* Khung bọc giới hạn độ rộng tổng thể căn giữa trang */
+.wrapper {
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+/* Biểu ngữ logo đại diện đầu trang */
+.logo-area {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.logo-area img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Menu điều hướng liên kết thanh ngang (Giữ font Arial cho liên kết sắc nét) */
+.top-nav {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.top-nav a {
+    font-family: Arial, Helvetica, sans-serif !important;
+    text-decoration: underline;
+    margin: 0 12px;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #7f8c8d;
+    margin: 12px 0;
+}
+
+/* Tiêu đề chính lớn "Astronomy" (Font Arial - Màu nâu sẫm `#a0522d`) */
+.main-title {
+    color: #a0522d;
+    font-size: 36px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+/* Đoạn văn giới thiệu mở đầu mang sắc chữ xanh lá cây `#27ae60` */
+.intro-text {
+    font-size: 14px;
+    color: #27ae60;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Tiêu đề mục h2 phân cấp (Font Arial - Màu nâu sẫm) */
+.section-heading {
+    color: #a0522d;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+/* 2. QUẢN LÝ BỐ CỤC CHIA CỘT NỘI DUNG CHÍNH (SỬ DỤNG FLOAT LAYOUT) */
+.main-content {
+    width: 100%;
+    overflow: hidden; /* Tự động dọn dẹp hàng float tránh vỡ layout con */
+}
+
+/* KHỐI PHẢI (Cột vàng cam Marathon) */
+.sidebar-marathon {
+    float: right;
+    width: 39%;
+    background-color: #ffe4b5; /* Màu nền cam nhạt của hộp bài viết */
+    border: 1px solid #cd853f;
+    padding: 15px;
+    margin-left: 1%;
+    margin-bottom: 15px;
+}
+
+.sidebar-marathon h2 {
+    color: #a0522d;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+/* Khung chứa hình thiên văn m20 nhỏ căn phải trong khối bài viết */
+.marathon-img-container {
+    float: right;
+    width: 105px;
+    margin-left: 12px;
+    margin-bottom: 5px;
+}
+
+.marathon-img-container img {
+    width: 100%;
+    border: 1px solid #000000;
+}
+
+/* Văn bản chữ mặc định màu xanh lá cây của khối marathon */
+.sidebar-marathon p {
+    font-size: 13px;
+    color: #27ae60;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    text-align: justify;
+}
+
+.highlight-green {
+    color: #196f3d;
+    font-weight: bold;
+}
+
+/* KHỐI TRÁI (Cột danh sách các sản phẩm thiên văn) */
+.products-section {
+    float: left;
+    width: 60%;
+}
+
+.product-list {
+    list-style-type: none; /* Khử dấu chấm tròn mặc định của thẻ ul */
+}
+
+/* Nội dung văn bản danh sách mặc định in màu xanh lá cây */
+.product-list li {
+    font-size: 13px;
+    color: #27ae60;
+    line-height: 1.5;
+    margin-bottom: 14px;
+    text-align: justify;
+    
+    /* Thiết lập Flexbox căn chỉnh thẳng hàng cho quả táo đầu dòng */
+    display: flex;
+    align-items: flex-start;
+}
+
+.apple-icon {
+    width: 13px;        /* Định tỷ lệ thu nhỏ icon quả táo */
+    height: 13px;
+    margin-right: 10px;  /* Tạo lề trống với phần chữ bên phải */
+    margin-top: 3px;     /* Đẩy nhẹ trục dọc icon cho cân đối hàng chữ */
+    flex-shrink: 0;
+}
+
+/* Tên sản phẩm mang sắc đỏ sẫm `#b22222` */
+.prod-name {
+    color: #b22222;
+    font-weight: bold;
+}
+
+.special-tag {
+    color: #f89a3c;
+    font-weight: bold;
+}
+
+/* 3. KHỐI Ý KIẾN KHÁCH HÀNG (ĐƯA VỀ DÒNG CHUẨN PHÍA DƯỚI KHỐI FLOAT) */
+.testimonials {
+    clear: both; /* Phá bỏ dòng chảy float phía trên */
+    padding-top: 15px;
+}
+
+.feedback-intro {
+    font-size: 14px;
+    color: #27ae60;
+    margin-bottom: 15px;
+}
+
+/* Hộp nhận xét đổ màu xám nhạt */
+.feedback-box {
+    background-color: #e5e7e9;
+    border: 1px solid #bdc3c7;
+    padding: 10px 15px;
+    font-size: 15px;
+    color: #27ae60;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.author-sub {
+    display: block;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 5px;
+}
+
+.customer-name {
+    font-size: 13px;
+    color: #27ae60;
+    margin-top: 4px;
+    margin-bottom: 15px;
+}
+
+/* 4. CHÂN TRANG LIÊN HỆ CHỮ XANH LÁ CÂY */
+.footer-info {
+    font-size: 13px;
+    color: #27ae60;
+    font-style: italic;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+.company-name {
+    font-weight: bold;
+}
