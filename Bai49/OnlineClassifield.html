@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Classifieds Search Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="form-container">
+        
+        <header class="form-header">
+            <h1>Online Classifieds Search Form</h1>
+            <hr class="header-line">
+        </header>
+
+        <form id="classifiedSearchForm">
+
+            <div class="form-section">
+                <p class="section-title">1) Search for a classified in the following sections:</p>
+                <div class="radio-group">
+                    <label class="control-label"><input type="radio" name="section" value="Employment"> Employment</label>
+                    <label class="control-label"><input type="radio" name="section" value="Personal"> Personal</label>
+                    <label class="control-label"><input type="radio" name="section" value="ForSale" checked> For Sale</label>
+                    <label class="control-label"><input type="radio" name="section" value="Miscellaneous"> Miscellaneous</label>
+                    <label class="control-label"><input type="radio" name="section" value="Housing"> Housing</label>
+                    <label class="control-label"><input type="radio" name="section" value="All"> All of the above</label>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <p class="section-title">2) Search the following publications:</p>
+                <div class="checkbox-grid">
+                    <label class="control-label"><input type="checkbox" name="publication" value="MidwestTimes" checked> Midwest times</label>
+                    <label class="control-label"><input type="checkbox" name="publication" value="ModernNews"> Modern News</label>
+                    <label class="control-label"><input type="checkbox" name="publication" value="EmploymentToday"> Employment Today</label>
+                    <label class="control-label"><input type="checkbox" name="publication" value="GreatLakes" checked> Great Lakes Classifieds</label>
+                    <label class="control-label"><input type="checkbox" name="publication" value="MiddletonDaily"> Middleton Daily</label>
+                    <label class="control-label"><input type="checkbox" name="publication" value="CashtownDaily"> Cashtown Daily News</label>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <p class="section-title inline-title">3) From</p>
+                <input type="text" name="dateFrom" placeholder="mm/dd/yy" class="input-date">
+                <span class="text-to">to</span>
+                <input type="text" name="dateTo" placeholder="mm/dd/yy" class="input-date">
+            </div>
+
+            <div class="form-section">
+                <p class="section-title">4) Enter a few keywords to describe the classified.</p>
+                <input type="text" name="keywords" class="input-keywords">
+            </div>
+
+            <div class="form-section">
+                <p class="section-title">5) Click one of the options below:</p>
+                
+                <div class="action-buttons-container">
+                    
+                    <div class="btn-item color-search" onclick="triggerSearch()">
+                        <img src="Search.gif" alt="Search">
+                        <span>Search</span>
+                    </div>
+
+                    <div class="btn-item color-help" onclick="triggerHelp()">
+                        <img src="Help.gif" alt="Help">
+                        <span>Help</span>
+                    </div>
+
+                    <div class="btn-item color-cancel" onclick="triggerCancel()">
+                        <img src="Cancel.gif" alt="Cancel">
+                        <span>Cancel</span>
+                    </div>
+
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+
+    <script>
+        function triggerSearch() {
+            alert("Đang tìm kiếm dữ liệu...");
+        }
+
+        function triggerHelp() {
+            window.open("https://support.google.com", "_blank");
+        }
+
+        function triggerCancel() {
+            document.getElementById("classifiedSearchForm").reset();
+        }
+    </script>
+
+</body>
+</html>

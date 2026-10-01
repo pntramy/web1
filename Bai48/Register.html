@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jackson Electronics - Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="form-wrapper">
+        
+        <header class="header-logo">
+            <div class="logo-box">
+                <img src="hinh/Jackson.gif" alt="Jackson Electronics Logo" class="logo-image">
+            </div>
+        </header>
+
+        <section class="form-heading">
+            <h1>Registration Form</h1>
+            <p>Register your Jackson Electronics product here</p>
+        </section>
+
+        <form id="registrationForm" onsubmit="handleRegister(event)">
+            
+            <div class="form-grid">
+                
+                <label for="firstName">First Name:</label>
+                <div class="inline-row">
+                    <input type="text" id="firstName" name="firstName" class="input-medium">
+                    <label for="lastName" class="label-inline">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" class="input-medium">
+                </div>
+
+                <label for="address1">Address #1:</label>
+                <input type="text" id="address1" name="address1" class="input-full">
+
+                <label for="address2">Address #2:</label>
+                <input type="text" id="address2" name="address2" class="input-full">
+
+                <label for="city">City:</label>
+                <div class="inline-row">
+                    <input type="text" id="city" name="city" class="input-long">
+                    <label for="state" class="label-inline">State:</label>
+                    <input type="text" id="state" name="state" class="input-short">
+                    <label for="zip" class="label-inline">Zip:</label>
+                    <input type="text" id="zip" name="zip" class="input-short">
+                </div>
+
+                <label for="country">Country:</label>
+                <input type="text" id="country" name="country" value="United States" class="input-long">
+
+            </div>
+
+            <hr class="form-divider">
+
+            <div class="form-grid">
+                
+                <label for="product">Product:</label>
+                <select id="product" name="product" class="select-medium">
+                    <option value="ScanMaster">ScanMaster</option>
+                    <option value="LaserPrinter">LaserPrinter</option>
+                    <option value="SuperModem">SuperModem</option>
+                </select>
+
+                <label for="datePurchased">Date Purchased:</label>
+                <input type="text" id="datePurchased" name="datePurchased" class="input-medium">
+
+                <label for="serialNum">Serial #:</label>
+                <input type="text" id="serialNum" name="serialNum" class="input-medium">
+
+                <label>Used for:</label>
+                <div class="options-group">
+                    <div class="options-column">
+                        <label class="radio-checkbox-label"><input type="radio" name="usedFor" value="Home"> Home</label>
+                        <label class="radio-checkbox-label"><input type="radio" name="usedFor" value="Business" checked> Business</label>
+                        <label class="radio-checkbox-label"><input type="radio" name="usedFor" value="Government"> Government</label>
+                    </div>
+                    <div class="options-column">
+                        <label class="radio-checkbox-label"><input type="radio" name="usedFor" value="Educational"> Educational Institution</label>
+                        <label class="radio-checkbox-label"><input type="radio" name="usedFor" value="Other"> Other</label>
+                    </div>
+                </div>
+
+                <label>System (check all that apply):</label>
+                <div class="options-group">
+                    <div class="options-column">
+                        <label class="radio-checkbox-label"><input type="checkbox" name="system" value="Windows"> Windows</label>
+                        <label class="radio-checkbox-label"><input type="checkbox" name="system" value="Macintosh"> Macintosh</label>
+                    </div>
+                    <div class="options-column">
+                        <label class="radio-checkbox-label"><input type="checkbox" name="system" value="UNIX"> UNIX</label>
+                        <label class="radio-checkbox-label"><input type="checkbox" name="system" value="Other"> Other</label>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="form-divider">
+
+            <div class="form-grid">
+                <label for="comments">Comments?:</label>
+                <textarea id="comments" name="comments" rows="6" class="textarea-full"></textarea>
+            </div>
+
+            <div class="buttons-area">
+                <button type="submit" class="btn-action">Click to register</button>
+                <button type="button" class="btn-action" onclick="handleCancel()">Click to cancel</button>
+            </div>
+
+        </form>
+
+    </div>
+
+    <script>
+        // Khi click register -> hiển thị alert thông báo
+        function handleRegister(event) {
+            event.preventDefault(); 
+            alert("Đăng ký thành công!");
+        }
+
+        // Khi click cancel -> xóa trắng dữ liệu trên Form bằng phương thức reset()
+        function handleCancel() {
+            document.getElementById("registrationForm").reset();
+        }
+    </script>
+
+</body>
+</html>

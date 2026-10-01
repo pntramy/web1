@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Times New Roman", Times, serif !important;
+}
+
+body {
+    background-color: #ffffff;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+/* KHUNG BAO NGOÀI FORM (Màu xanh Cyan nhạt viền xanh dương đậm) */
+.form-container {
+    width: 100%;
+    max-width: 750px;
+    background-color: #c9f6fd; 
+    border: 2px solid #0000ff; 
+    padding: 30px 40px;
+}
+
+/* 1. TIÊU ĐỀ CHÍNH MÀU ĐỎ RỰC */
+.form-header h1 {
+    color: #ff0000;            
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.header-line {
+    border: none;
+    border-top: 1px solid #7f8c8d;
+    margin-bottom: 25px;
+}
+
+/* 2. CÁC TIÊU ĐỀ MỤC CÂU HỎI (IN ĐẬM) */
+.form-section {
+    margin-bottom: 24px;
+}
+
+.section-title {
+    font-size: 17px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 14px;
+}
+
+/* 3. CẤU TRÚC LƯỚI LỰA CHỌN (ĐÃ ÉP SANG TIMES NEW ROMAN) */
+.radio-group {
+    display: grid;
+    grid-template-columns: repeat(2, 200px); 
+    column-gap: 40px;
+    row-gap: 6px;
+    padding-left: 15px;
+}
+
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);   
+    column-gap: 15px;
+    row-gap: 8px;
+    padding-left: 15px;
+}
+
+.control-label {
+    font-size: 15px;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.control-label input {
+    cursor: pointer;
+}
+
+/* 4. CÂN ĐỐI LẠI PHẦN NHẬP KHOẢNG THỜI GIAN (MỤC 3) */
+.inline-title {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: 12px; 
+}
+
+.input-date {
+    width: 160px;
+    padding: 4px 6px;
+    border: 1px solid #7f8c8d;
+    background-color: #ffffff;
+    font-size: 14px;
+}
+
+.text-to {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 12px;
+}
+
+/* 5. THANH Ô NHẬP TỪ KHÓA (MỤC 4) */
+.input-keywords {
+    width: 100%;
+    max-width: 650px;
+    padding: 5px 8px;
+    border: 1px solid #7f8c8d;
+    background-color: #ffffff;
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+/* 6. KHỐI NÚT CHỨC NĂNG ĐỒ HỌA CHÂN TRANG (MỤC 5) */
+.action-buttons-container {
+    display: flex;
+    gap: 60px; 
+    padding-left: 25px;
+    margin-top: 15px;
+}
+
+/* Định hình từng cụm nút bao gồm ảnh và chữ xếp dọc */
+.btn-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.1s ease;
+}
+
+.btn-item img {
+    height: 28px; 
+    width: auto;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.btn-item span {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* PHÂN ĐỊNH MÀU SẮC CHỮ CHO TỪNG NÚT KHÍT THEO GIAO DIỆN GỐC */
+.color-search span {
+    color: #27ae60; /* Màu xanh lá cho chữ Search */
+}
+
+.color-help span {
+    color: #0056b3;  /* Màu xanh dương cho chữ Help */
+}
+
+.color-cancel span {
+    color: #e91e63; /* Màu hồng/đỏ cho chữ Cancel */
+}
+
+/* Hiệu ứng tương tác chuột */
+.btn-item:active {
+    transform: scale(0.92);
+}
